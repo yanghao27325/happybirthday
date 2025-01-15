@@ -11,6 +11,9 @@
     <script type="text/javascript" src="./css/jscex-async-powerpack.min.js"></script>
     <script type="text/javascript" src="./css/functions.js" charset="utf-8"></script>
     <script type="text/javascript" src="./css/love.js" charset="utf-8"></script>
+    <audio autoplay loop id="bgMusic">
+        <source src="https://music.163.com/song/media/outer/url?id=308353" type="audio/mpeg">
+    </audio>
       <style type="text/css">
 <!--
 .STYLE1 {color: #953737}
@@ -23,13 +26,13 @@
                 <div id="text">
               <div id="code">
             <font color="#000000">    
-<span class="say"><h1>你好呀，XX</h1></span>
+<span class="say"><h1>你好呀，刘以琳</h1></span>
 <span class="say">你的名字如诗如画，美丽动人</span><br> <br>    
 <span class="say">我愿用一生去珍爱，铭记心间</span><br><br>
 <span class="say">我喜欢你的热情，热情可以温暖我</span><br><br>
 <span class="say">你的吻如有魔法，可以驱散天空的阴云</span><br><br>
 <span class="say">你是非常可爱的人，真应该遇到最好的人</span><br><br>
-<span class="say">我希望我就是，XX生日快乐</span><br><br>
+<span class="say">我希望我就是，刘以琳生日快乐</span><br><br>
         </font>
     </div>
     <span class="say"></span><br><br>
@@ -42,6 +45,13 @@
     <canvas id="canvas" width="600" height="150"></canvas>
 </div>
             
+    <div style="position: fixed; bottom: 20px; right: 20px;">
+        ❤️ 刘以琳
+    </div>
+
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 999; cursor: pointer;">
+        <span onclick="toggleMusic()" id="musicControl">��</span>
+    </div>
 </div>
 
 
@@ -187,7 +197,7 @@
 
         var textAnimate = eval(Jscex.compile("async", function () {
         var together = new Date();
-        together.setFullYear(2024,10 - 1,1 );      //时间年月日
+        together.setFullYear(2023,6- 1, 18);      //时间年月日
         together.setHours(18);            //小时  
         together.setMinutes(1);          //分钟
         together.setSeconds(1);         //秒前一位
@@ -214,6 +224,17 @@
 
         runAsync().start();
     })();
+    </script>
+
+    <script>
+        function toggleMusic() {
+            var music = document.getElementById('bgMusic');
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
     </script>
 
     </body></html>
